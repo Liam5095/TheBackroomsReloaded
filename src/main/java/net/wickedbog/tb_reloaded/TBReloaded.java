@@ -12,6 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.wickedbog.tb_reloaded.block.ModBlocks;
 import net.wickedbog.tb_reloaded.item.ModCreativeModTabs;
 import net.wickedbog.tb_reloaded.item.ModItems;
 import org.slf4j.Logger;
@@ -29,6 +30,8 @@ public class TBReloaded
         ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

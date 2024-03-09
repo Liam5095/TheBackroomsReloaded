@@ -8,6 +8,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.wickedbog.tb_reloaded.TBReloaded;
+import net.wickedbog.tb_reloaded.block.ModBlocks;
 
 public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -18,6 +19,8 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.example_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.EXAMPLE_ITEM.get());
+
+                        pOutput.accept(ModBlocks.EXAMPLE_BLOCK.get());
                     })
                     .withSearchBar()
                     .build());
